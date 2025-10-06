@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_page_item.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/page_item.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_activity_main.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/drawable_ic_android_black_24dp.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/drawable/ic_android_black_24dp.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_page_layout.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/page_layout.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_search_result_item.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/search_result_item.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_item_app.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/item_app.xml"
+    },
+    {
+        "merged": "com.example.mylauncher.app-release-32:/layout_item_app.xml.flat",
+        "source": "com.example.mylauncher.app-main-33:/layout/item_app.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_dialog_search_app.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/dialog_search_app.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_themes.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/themes.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_dialog_page_navigation.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/dialog_page_navigation.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/drawable_icon_bg.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-resValues-29:/drawable/icon_bg.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_dialog_search.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/dialog_search.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_item_page.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/item_page.xml"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-release-32:/layout_app_item.xml.flat",
+        "source": "/home/v/.gradle/daemon/9.0-milestone-1/com.example.mylauncher.app-main-33:/layout/app_item.xml"
+    }
+]

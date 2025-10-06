@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/v/AndroidStudioProjects/MyLauncher-5/app"
+    name=":app"
+    type="APP"
+    maven="MyLauncher:app:unspecified"
+    agpVersion="8.13.0"
+    buildFolder="build"
+    bootClassPath="/home/v/Android/Sdk/platforms/android-34/android.jar:/home/v/Android/Sdk/build-tools/35.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

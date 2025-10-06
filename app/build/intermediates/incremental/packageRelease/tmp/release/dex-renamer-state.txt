@@ -1,0 +1,4 @@
+#Mon Oct 06 03:59:03 MSK 2025
+base.0=/home/v/AndroidStudioProjects/MyLauncher-5/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

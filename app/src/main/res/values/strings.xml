@@ -1,0 +1,13 @@
+<resources>
+    <!-- Название приложения -->
+    <string name="app_name">MyLauncher</string>
+
+    <!-- Для элементов интерфейса -->
+    <string name="app_icon">Иконка приложения</string>
+    <string name="app_label">Название приложения</string>
+
+    <!-- Для главного экрана -->
+    <string name="page_info">Страница %1$d из %2$d</string>
+    <string name="go_to_page">Перейти к экрану:</string>
+    <string name="ok">Хорошо</string>
+</resources>
