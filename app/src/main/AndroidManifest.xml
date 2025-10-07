@@ -31,12 +31,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- Нужно, чтобы приложение предлагалось как домашний лаунчер -->
+            <!-- Нужно, чтобы приложение предлагалось как домашний лаунчер
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            -->
         </activity>
 
         <receiver

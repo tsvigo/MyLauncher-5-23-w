@@ -16,7 +16,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#888888"
         android:inputType="text"
-        //app:dropDownBackgroundTint="#333333"
+
 
         android:dropDownVerticalOffset="8dp"
         android:completionThreshold="1"/>

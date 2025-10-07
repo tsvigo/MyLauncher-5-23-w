@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/home/v/AndroidStudioProjects/MyLauncher-5/app"
+    dir="/home/v/AndroidStudioProjects/MyLauncher-5-23-w/app"
     name=":app"
     type="APP"
     maven="MyLauncher:app:unspecified"

@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ListView
 import android.text.TextWatcher
-
 import android.text.Editable
 import android.widget.Toast
 //----------------------------
@@ -24,11 +23,10 @@ import android.graphics.Color
 //-------------
 import android.widget.Filter
 import android.widget.Filterable
-
-
 import android.widget.Filter.FilterResults
-
-
+// 🔹 добавлено
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +37,11 @@ class MainActivity : AppCompatActivity() {
 
     private val appsPages = mutableListOf<MutableList<AppInfo>>()
     private val allApps = mutableListOf<AppInfo>()  // для поиска
-    private val appsPerPage = 28  // 🔹 28 ярлыков на страницу
+    private val appsPerPage = 24  // 🔹 24 ярлыка на страницу
+
+    // 🔹 добавлено для сохранения
+    private val prefs by lazy { getSharedPreferences("launcher_prefs", MODE_PRIVATE) }
+    private val gson = Gson()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +61,8 @@ class MainActivity : AppCompatActivity() {
                 launchIntent?.let { startActivity(it) }
             },
             onMoveApp = { app ->
-                println("Long pressed: ${app.appName}")
+                // 🔹 теперь при долгом тапе открывается окно перемещения по номеру страницы
+                showMoveAppDialog(app)
             }
         )
 
@@ -96,10 +99,47 @@ class MainActivity : AppCompatActivity() {
         allApps.clear()
         allApps.addAll(apps)
 
+        // 🔹 восстановление сохранённого расположения
+        val savedJson = prefs.getString("apps_layout", null)
+        if (savedJson != null) {
+            try {
+                val type = object : TypeToken<List<List<String>>>() {}.type
+                val savedLayout: List<List<String>> = gson.fromJson(savedJson, type)
+
+                appsPages.clear()
+                for (page in savedLayout) {
+                    val pageList = mutableListOf<AppInfo>()
+                    for (pkg in page) {
+                        val found = apps.find { it.packageName == pkg }
+                        if (found != null) pageList.add(found)
+                    }
+                    appsPages.add(pageList)
+                }
+
+                // если появились новые приложения — добавляем их в конец
+                val savedPkgs = savedLayout.flatten().toSet()
+                val newApps = apps.filter { it.packageName !in savedPkgs }
+                if (newApps.isNotEmpty()) {
+                    if (appsPages.isEmpty()) appsPages.add(mutableListOf())
+                    appsPages.last().addAll(newApps)
+                }
+
+                return
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
         appsPages.clear()
         apps.chunked(appsPerPage).forEach {
             appsPages.add(it.toMutableList())
         }
+    }
+
+    // 🔹 сохранение текущего расположения
+    private fun saveAppsLayout() {
+        val layout = appsPages.map { page -> page.map { it.packageName } }
+        prefs.edit().putString("apps_layout", gson.toJson(layout)).apply()
     }
 
     private fun updatePageInfo(currentPage: Int) {
@@ -127,6 +167,72 @@ class MainActivity : AppCompatActivity() {
         }
 
         dialog.show()
+    }
+
+    // 🔹 перемещение ярлыка по номеру страницы с ограничением +1
+    private fun showMoveAppDialog(app: AppInfo) {
+        val inflater = LayoutInflater.from(this)
+        val dialogView = inflater.inflate(R.layout.dialog_page_navigation, null)
+        val input = dialogView.findViewById<EditText>(R.id.page_number_input)
+        val goButton = dialogView.findViewById<Button>(R.id.go_button)
+
+        val dialog = AlertDialog.Builder(this, R.style.AppTheme_Dialog)
+            .setTitle("Переместить «${app.appName}»")
+            .setView(dialogView)
+            .create()
+
+        goButton.text = "Переместить"
+
+        goButton.setOnClickListener {
+            val targetPage = input.text.toString().toIntOrNull()
+            val currentPage = viewPager.currentItem
+            val totalPages = appsPages.size
+
+            if (targetPage == null || targetPage < 1) {
+                input.error = "Введите число от 1"
+                return@setOnClickListener
+            }
+
+            when {
+                // 🔹 Перемещение в существующую страницу
+                targetPage <= totalPages -> {
+                    moveAppToPage(app, currentPage, targetPage)
+                }
+
+                // 🔹 Добавляем ровно одну новую страницу
+                targetPage == totalPages + 1 -> {
+                    appsPages.add(mutableListOf())
+                    moveAppToPage(app, currentPage, targetPage)
+                }
+
+                // 🔹 Если пытаются добавить дальше чем +1 — ошибка
+                else -> {
+                    input.error = "Можно добавить только страницу ${totalPages + 1}"
+                    return@setOnClickListener
+                }
+            }
+
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    // 🔹 вспомогательная функция переноса и сохранения
+    private fun moveAppToPage(app: AppInfo, fromPage: Int, toPage: Int) {
+        if (appsPages[fromPage].remove(app)) {
+            appsPages[toPage - 1].add(app)
+            viewPager.adapter?.notifyDataSetChanged()
+            saveAppsLayout()
+            Toast.makeText(
+                this,
+                "«${app.appName}» перемещено на страницу $toPage",
+                Toast.LENGTH_SHORT
+            ).show()
+            viewPager.currentItem = toPage - 1
+        } else {
+            Toast.makeText(this, "Ошибка перемещения", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun showSearchDialog() {
@@ -218,11 +324,4 @@ class MainActivity : AppCompatActivity() {
 
         dialog.show()
     }
-
-
-
-
-
-
-
 }

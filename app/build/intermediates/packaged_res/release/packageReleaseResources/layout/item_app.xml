@@ -7,23 +7,22 @@
     android:padding="6dp">
 
     <FrameLayout
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:gravity="center">
 
         <ImageView
             android:id="@+id/app_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="false"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_gravity="center"
-            android:background="@drawable/icon_bg" />
+            android:scaleType="centerInside"
+            android:adjustViewBounds="false" />
     </FrameLayout>
 
     <TextView
         android:id="@+id/app_name"
-        android:layout_width="80dp"
+        android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:textSize="12sp"

@@ -1,5 +1,8 @@
 package com.example.mylauncher
 
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,13 +30,11 @@ class AppAdapter(
     override fun onBindViewHolder(holder: AppViewHolder, position: Int) {
         val app = apps[position]
 
-        // фиксированный размер иконок (в dp → px)
+        // 🔹 Принудительно нормализуем размер иконки (64dp × 64dp)
         val density = holder.itemView.resources.displayMetrics.density
-        val iconSizePx = (64 * density).toInt() // 🔹 64dp = одинаковые по размеру
-
-        val drawable = app.appIcon
-        drawable.setBounds(0, 0, iconSizePx, iconSizePx)
-        holder.iconView.setImageDrawable(drawable)
+        val sizePx = (64 * density).toInt()
+        val iconBitmap = drawableToBitmap(app.appIcon, sizePx, sizePx)
+        holder.iconView.setImageBitmap(iconBitmap)
 
         holder.nameView.text = app.appName
 
@@ -45,4 +46,13 @@ class AppAdapter(
     }
 
     override fun getItemCount(): Int = apps.size
+
+    // 🔹 Преобразует Drawable в Bitmap фиксированного размера
+    private fun drawableToBitmap(drawable: Drawable, width: Int, height: Int): Bitmap {
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        drawable.setBounds(0, 0, width, height)
+        drawable.draw(canvas)
+        return bitmap
+    }
 }

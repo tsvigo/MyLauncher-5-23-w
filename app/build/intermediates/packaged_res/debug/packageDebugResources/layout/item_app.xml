@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="8dp">
+    android:gravity="center_horizontal"
+    android:padding="6dp">
 
-    <ImageView
-        android:id="@+id/app_icon"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitCenter" />
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="false" />
+    </FrameLayout>
 
     <TextView
-        android:id="@+id/app_label"
+        android:id="@+id/app_name"
         android:layout_width="72dp"
         android:layout_height="wrap_content"
-        android:text="App name"
+        android:textColor="#000000"
         android:textSize="12sp"
-        android:textColor="@android:color/black"
-        android:gravity="center"
         android:ellipsize="end"
-        android:singleLine="true"
+        android:maxLines="1"
+        android:gravity="center"
         android:layout_marginTop="4dp" />
-
 </LinearLayout>
